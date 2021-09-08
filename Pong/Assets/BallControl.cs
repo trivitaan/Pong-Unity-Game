@@ -53,6 +53,9 @@ public class BallControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(rigidbody2D.velocity.magnitude != speed)
+        {
+            rigidbody2D.velocity = rigidbody2D.velocity.normalized * speed;
+        }
     }
 }
